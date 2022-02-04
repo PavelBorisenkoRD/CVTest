@@ -10,6 +10,7 @@ main {
   width: 210mm;
   height: 297mm;
   background-image: url("./img/tbodyback.jpeg");
+  background-size: cover;
   margin: 200px auto;
 }
 header {
@@ -58,6 +59,7 @@ header {
 }
 
 .content-left {
+  flex: 1 1 200px;
   display: flex;
   flex-direction: column;
   border-right: 2px solid brown;
@@ -79,6 +81,7 @@ header {
 }
 
 .content-right {
+  flex: 1 1 200px;
   padding-left: 30px;
   padding: 0px 30px;
 }
@@ -123,4 +126,32 @@ header {
   padding-top: 30px;
   border-bottom: 2px solid brown;
   padding-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+  main {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  header {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  content {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .content-left {
+    flex-grow: 1;
+    border-right: none;
+  }
+
+  .study {
+    border-bottom: 2px solid brown;
+    padding-bottom: 20px;
+  }
 }
